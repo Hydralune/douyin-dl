@@ -1,0 +1,46 @@
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+.venv/
+venv/
+env/
+
+# ---- 运行时产物 ----
+downloads/
+chrome-profile/
+*.part
+*.mp4
+*.mp3
+*.jpg
+*.png
+!docs/**/*.png
+!skill/**/*.png
+_out*.json
+_err*.log
+_a.json
+_a.err
+_e.json
+gui_error.log
+
+# ---- 本地配置与密钥 ----
+config.toml
+cookies.txt
+*.keystore
+*.jks
+.env
+
+# ---- 编辑器 / 系统 ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- 测试临时 ----
+tests/_shots/
+tests/_dl_test/
+tests/_gui_dl/

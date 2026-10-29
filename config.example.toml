@@ -1,0 +1,27 @@
+# douyin-dl 配置样例
+# 复制为 config.toml 即生效；也可以放 ~/.douyin_dl/config.toml
+#
+# 优先级：命令行参数 > 环境变量(DOUYIN_DL_*) > 本文件 > 内置默认值
+# 查看当前生效配置：python -m douyin_dl config
+
+[download]
+out_dir = "downloads"      # 输出目录，可写绝对路径
+quality = ""               # 空 = 最高清；也可写 1080p / 720p / 540p
+music = false              # 是否同时下背景音乐 mp3
+zip_images = false         # 图集是否打包 zip
+rate_limit_mb = 0          # 限速 MB/s，0 = 不限
+overwrite = false          # 已存在文件是否覆盖
+
+[browser]
+headless = true            # false = 显示浏览器窗口（首次登录 / 排错用）
+channel = "chrome"         # chrome / msedge / ""（空 = 用 playwright 自带 chromium）
+profile = ""               # 登录态目录。跑过 python tools/login.py 后填这里
+cdp = ""                   # 或接管已开调试端口的 Chrome：http://127.0.0.1:9222
+
+[agent]
+json = true                # agent 调用时 stdout 只输出 JSON
+timeout = 600              # 单条超时秒数
+
+[cache]
+enabled = true             # 作品详情缓存，同作品重复解析秒回
+ttl = 3600                 # 缓存有效期（秒）
