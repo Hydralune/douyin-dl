@@ -69,6 +69,23 @@ skill/
 
 把它放到你的 agent 的 skills 目录，或者直接照着 `SKILL.md` 调脚本。
 
+### 一键安装到 agent
+
+```bash
+python tools/install_skill.py
+```
+
+自动探测 skills 目录（DSH → `~/.dsh/skills`，其余 → `~/.agents/skills`、`~/.claude/skills`），
+复制 skill 并在 `~/.douyin_dl/install.json` 记下项目根，装完立刻跑一次自检。
+
+```bash
+python tools/install_skill.py --list                    # 看装在哪
+python tools/install_skill.py --target DIR              # 指定目录
+python tools/install_skill.py --uninstall               # 卸载
+```
+
+装好后 agent 会通过文件监听自动发现，不用重启。
+
 ### 一行调用
 
 ```bash

@@ -238,4 +238,4 @@ profile = "chrome-profile"
 3. 加 `-v` 看 stderr 的详细日志（agent 模式下不影响 stdout 的 JSON）
 4. 确认链接形态：`https://v.douyin.com/` 开头最稳，纯 ID 也行
 
-更多字段说明、平台扩展方法、内部原理见 [reference.md](reference.md)。
+更多字段说明、平台扩展方法、内部原理见 [references/technical.md](references/technical.md)。
